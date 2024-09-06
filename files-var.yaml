@@ -2,7 +2,7 @@
   hosts: web
   vars_files:
   - vars.yaml
-  taks:
+  tasks:
     - name: print the course
       ansible.builtin.debug:
         msg: "Hi iam learning {{Course}}, Duration is {{Duration}}, Trainer {{Trainer}}"

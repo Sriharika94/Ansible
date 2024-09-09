@@ -5,6 +5,6 @@
   - name: print names
     ansible.builtin.debug:
      msg: "{{ items }}"
-    loops:
+    loop:
     - Ramesh
     - Ram

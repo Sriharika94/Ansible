@@ -10,9 +10,9 @@
     - ansible
     live: true
     tools:
-    ci: jenkins
-    cm: ansinle
-    cloud: aws
+      ci: jenkins
+      cm: ansinle
+      cloud: aws
   tasks:
   - name: print the course information
     ansible.builtin.debug:

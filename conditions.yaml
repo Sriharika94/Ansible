@@ -1,7 +1,7 @@
 - name: check a number is less than 10 or not
   hosts: local
   connection: local
-  Vars_prompt:
+  vars_prompt:
   - name: my_number
     prompt: please enter the number
 

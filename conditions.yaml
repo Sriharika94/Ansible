@@ -4,7 +4,8 @@
   Vars_prompt:
   - name: my_number
     prompt: please enter the number
-  taks:
+
+  tasks:
   - name: print if less than 10
     ansible.builtin.debug:
      msg: " Given number {{ my_number }} is less than 10"

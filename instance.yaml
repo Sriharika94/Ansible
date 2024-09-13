@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars:
-    subnet-id: subnet-05fdbe225f80844f4 
-    sg-id: sg-0092ebbe5635f504f
-    ami-id: ami-09c813fb71547fc4f
+    subnet_id: subnet-05fdbe225f80844f4 
+    sg_id: sg-0092ebbe5635f504f
+    ami_id: ami-09c813fb71547fc4f
     instances:
      - mysql
      - backend
@@ -13,9 +13,9 @@
     - name: create ec2 user
       amazon.aws.ec2_instance:
         name: "{{ item }}"
-        vpc_subnet_id: "{{ subnet-id }}"
+        vpc_subnet_id: "{{ subnet_id }}"
         instance_type: "t3.micro"
-        security_group: "{{ sg-id }}"
-        image_id: "{{ ami-id }}"
+        security_group: "{{ sg_id }}"
+        image_id: "{{ ami_id }}"
       loop: "{{ instances }}"
       register: ec2_instances

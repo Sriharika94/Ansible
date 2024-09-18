@@ -11,6 +11,14 @@
      - frontend
     zone: sriharikalearningdevops.online
   tasks:
+    
+    - name: install botocore boto3
+      ansible.builtin.pip:
+        name:
+        - botocore
+        - boto3
+        executable: pip3.9
+        
     - name: create ec2 user
       amazon.aws.ec2_instance:
         name: "{{ item }}"
